@@ -1,0 +1,107 @@
+/* Importing Open Sans Condensed Google font */
+/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap'); */
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+:root {
+  --fontColor: white;
+  --glowColor: white;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    color:var(--fontColor);
+    font-family: 'Press Start 2P', Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#clock-container {
+    display: flex;
+    flex-flow: row nowrap;
+    border-radius: 25px;
+    border: 10px var(--fontColor) solid;
+    padding: 25px;
+}
+
+#clock {
+    font-size: 7vw;
+    text-align: center
+}
+
+#checkbox-container {
+    opacity: .5;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 10px;
+    position: fixed;
+    bottom: 10px;
+    right:10px;
+}
+
+#checkbox-container p{
+  font-size: 10px;
+  font-style: italic;
+}
+
+.backgroundAnim {
+  background: linear-gradient(320deg,#77ff,#762562,#251a22);
+  background-size: 150% 150%;
+  animation: gradient-animation 8s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.glow {
+  color: var(--fontColor);
+
+  animation: glow 2.5s ease-in infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 60px var(--glowColor);
+  }
+  to {
+    text-shadow: 0 0 120px var(--glowColor);
+  }
+}
+
+
+.glowBox {
+  color: var(--fontColor);
+
+  animation: glowBox 2.5s ease-in infinite alternate;
+}
+
+@keyframes glowBox {
+  from {
+    box-shadow: 0 0 20px 0 var(--glowColor);
+
+  }
+  to {
+    box-shadow: 0 0 40px 0 var(--glowColor);
+  }
+}
